@@ -1,17 +1,9 @@
 import allCountries from './assets/all-countries';
 
-export function getCountry() {
-  return fetch('https://ip2c.org/s')
-    .then((response) => response.text())
-    .then((response) => {
-      const result = (response || '').toString();
-
-      if (!result || result[0] !== '1') {
-        throw new Error('unable to fetch the country');
-      }
-
-      return result.substr(2, 2);
-    });
+export async function getCloudflareJSON() {
+  const data = await fetch('https://www.cloudflare.com/cdn-cgi/trace').then((res) => res.text());
+  const arr = data.trim().split('\n').map((e) => e.split('='));
+  return Object.fromEntries(arr);
 }
 
 // Credits: http://blog.vishalon.net/index.php/javascript-getting-and-setting-caret-position-in-textarea/

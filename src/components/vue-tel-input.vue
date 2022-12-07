@@ -92,7 +92,7 @@
 
 <script>
 import { parsePhoneNumberFromString } from 'libphonenumber-js';
-import utils, { getCountry, setCaretPosition } from '../utils';
+import utils, { setCaretPosition, getCloudflareJSON } from '../utils';
 import clickOutside from '../directives/click-outside';
 
 function getDefault(key) {
@@ -424,9 +424,9 @@ export default {
          * 3. Check if fetching country based on user's IP is allowed, set it as the default country
          */
         if (this.autoDefaultCountry) {
-          getCountry()
+          getCloudflareJSON()
             .then((res) => {
-              this.choose(res || this.activeCountryCode);
+              this.choose(res.loc || this.activeCountryCode);
             })
             .catch((error) => {
               console.warn(error);
