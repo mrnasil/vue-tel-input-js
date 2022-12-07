@@ -11,8 +11,8 @@
   },
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "cp .browserslistrc.legacy .browserslistrc && vue-cli-service build --target lib src/index.js --dest dist",
-    "build:modern": "cp .browserslistrc.modern .browserslistrc && MODERN=true vue-cli-service build --target lib src/index.js --dest dist-modern",
+    "build": "copy .browserslistrc.legacy .browserslistrc && vue-cli-service build --target lib src/index.js --dest dist",
+    "build:modern": "copy .browserslistrc.modern .browserslistrc && MODERN=true vue-cli-service build --target lib src/index.js --dest dist-modern",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "test:unit": "vue-cli-service test:unit",
