@@ -1,13 +1,13 @@
 {
-  "name": "vue-tel-input",
-  "version": "5.12.0",
+  "name": "vue-tel-input-js",
+  "version": "1.0.0",
   "description": "International Telephone Input with Vue",
-  "author": "Steven Dao <iamstevendao@gmail.com>",
+  "author": "Faruk ARIGUN <mail@farukarigun.com>",
   "license": "MIT",
   "homepage": "https://vue-tel-input.iamstevendao.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iamstevendao/vue-tel-input.git"
+    "url": "git+https://github.com/mrnasil/vue-tel-input-js"
   },
   "scripts": {
     "dev": "vuepress dev docs",
@@ -57,7 +57,6 @@
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
-  "readme": "README.md",
   "keywords": [
     "vue",
     "telephone",
@@ -66,6 +65,13 @@
     "phone input",
     "telephone input",
     "input",
-    "international phone"
-  ]
+    "international phone",
+    "international telephone"
+  ],
+  "bugs": {
+    "url": "https://github.com/mrnasil/vue-tel-input-js/issues"
+  },
+  "directories": {
+    "doc": "docs"
+  }
 }
